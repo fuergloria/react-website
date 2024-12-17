@@ -115,7 +115,7 @@ const PictureContainer = ({pic}) => {
       {pic.type === "normal" && (
         <div className="mb-3 img-container"> 
           <img
-            src={pic.source}
+            src={process.env.PUBLIC_URL+ pic.source}
             alt={pic.alttext}
             className="img-fluid"
           />

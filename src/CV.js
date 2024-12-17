@@ -25,7 +25,7 @@ const ProfileOverview = () => {
 const ProfilePic=()=>{
   return(
     <div className="d-flex align-items-center col-sm-4">
-      <img className="profile-pic mx-auto align-center" src="/profilepic.jpg"/>
+      <img className="profile-pic mx-auto align-center" src={process.env.PUBLIC_URL+ "/profilepic.jpg"}/>
     </div>   
   )
 }
@@ -431,7 +431,7 @@ const Download = () => {
     <div className='container w-10 d-flex flex-column align-items-center'>
       <img 
         className="w-25" 
-        src='/download-icon.png'
+        src={process.env.PUBLIC_URL+ '/download-icon.png'}
         onClick={handleDownload}
         style={{cursor:"pointer"}}
         alt="Download Lebenslauf"      
