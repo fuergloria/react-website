@@ -58,7 +58,7 @@ const SubHeadline = ({headline, subtext}) => {
 
 
   return(
-    <div className="container-fluid text-center">
+    <div className="container-fluid subheadline">
       <h2>{headline}</h2>
       <p>{subtext}</p>
       {headline === "Malerei" && 

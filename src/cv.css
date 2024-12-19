@@ -89,17 +89,23 @@
   overflow-wrap: break-word;
 }
 
-.contact-section{
-  background-color: #1a80d8;
-}
-
 .color-custom{
   color: #1a80d8;
 }
 
 .contact{
   width: 60%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.opacity-normal{
+  position: "relative";
+  z-index: 2;
+}
+
+.form-control{
+  opacity: 0.8;
 }
 
 .color-white{

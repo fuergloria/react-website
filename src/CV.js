@@ -302,9 +302,22 @@ const TimelineItem = ({index, item}) => {
 }
 
 const ContactSection = ({contactRef}) => {
+
+  const section = {
+    backgroundImage: `url(${process.env.PUBLIC_URL}/handpaint2.2.jpg)`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "0% 60%",
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    width: "100%",
+    position: "relative"
+  };
+
   return(
-    <div className='contact-section' ref={contactRef}>
-      <hr className='mb-0'></hr>
+    <div style={{...section}} ref={contactRef}>
       <Contact/>
       <Download />
     </div>
@@ -313,6 +326,7 @@ const ContactSection = ({contactRef}) => {
 
 
 const Contact = () => {
+
   return(
     <div className='d-flex justify-content-center my-3' >
       <div className="contact d-flex d-inline-block row m-2 p-3">
@@ -326,7 +340,7 @@ const Contact = () => {
 
 const ContactInfo = () => {
   return(
-    <div className='col-5 d-flex flex-column text-center justify-content-center'>
+    <div className='col-5 d-flex flex-column text-center justify-content-center opacity-normal'>
       <h2>Kontakt</h2>
       <p>Ich freue mich über Ihr Interesse! Für weitere Informationen oder Anfragen, können Sie mich gerne telefonisch oder per E-Mail erreichen.
          Sie können auch das Kontaktformular nutzen und ich melde mich schnellstmöglich zurück.</p>
@@ -388,7 +402,7 @@ const ContactForm = () => {
 
 
   return(
-    <div className='col text-center justify-content-center'>
+    <div className='col text-center justify-content-center opacity-normal'>
 
       <form onSubmit={handleSubmit}>
 
