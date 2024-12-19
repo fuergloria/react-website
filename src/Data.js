@@ -1,7 +1,7 @@
 export const PICS = [
   {type: "normal", name: "bird", source:"/bird-frontal.jpg", alttext:"Vogel-Acrylbild" },
   {type: "switch", name: "frog", source:["/frog-0.jpg","./frog-dark-0.jpg"], alttext:"Frosch-Acrylbild" },
-  {type: "normal", name: "donkey", source:"esel-0.jpg", alttext:"Esel-Acrylbild" },
+  {type: "normal", name: "donkey", source:"/esel-0.jpg", alttext:"Esel-Acrylbild" },
   {type: "rondell", name: "toscana", 
     source:["/toscana-5.jpg", "/toscana-1.jpg", "/toscana-2.jpg", "/toscana-3.jpg", "/toscana-4.jpg" ], alttext:"Toscana-Acrylbild"},
   {type: "normal", name: "pokemon", source:"/pokemon-0.jpg", alttext:"Pokemon-Acrylbild" },
@@ -9,8 +9,8 @@ export const PICS = [
 ]
 
 export const MOREPICS = [
-  {type:"flower", name: "booty", source:"./booty.png", alttext:"Stiftehalter aus Ton, Hüfte"},
-  {type: "basket", name: "basketball", source:"./basketpongnoback.png", alttext:"Basketpong"}
+  {type:"flower", name: "booty", source:"/booty.png", alttext:"Stiftehalter aus Ton, Hüfte"},
+  {type: "basket", name: "basketball", source:"/basketpongnoback.png", alttext:"Basketpong"}
 ]
 
 

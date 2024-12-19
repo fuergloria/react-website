@@ -126,12 +126,12 @@ const PictureContainer = ({pic}) => {
       {pic.type === "switch" && (
         <div className="pic-switch-container">
           <img
-            src={pic.source[0]}
+            src={process.env.PUBLIC_URL+ pic.source[0]}
             alt={pic.alttext}
             className="img-fluid pic-switch"
           />
           <img
-            src={pic.source[1]}
+            src={process.env.PUBLIC_URL+ pic.source[1]}
             alt={pic.alttext}
             className="img-fluid pic-switch-hover"
           />
@@ -145,7 +145,7 @@ const PictureContainer = ({pic}) => {
       {pic.type === "turned" && (
         <div className="mb-3 img-container"> 
         <img
-          src={pic.source}
+          src={process.env.PUBLIC_URL+ pic.source}
           alt={pic.alttext}
           className="img-fluid pic-turn"
         />
@@ -188,7 +188,7 @@ const PictureCarousel = ({pics}) => {
         <ReactBootstrap.Carousel.Item key={i}>
           <img
             className="d-block w-100"
-            src={s}
+            src={process.env.PUBLIC_URL+ s}
             alt={pics.alttext}
           />
          {(i===0) && (
@@ -210,7 +210,7 @@ const Basketpong = ({pic}) => {
   return (
     <div className="mb-3 img-container"> 
       <img
-        src={pic.source}
+        src={process.env.PUBLIC_URL+ pic.source}
         alt={pic.alttext}
         className="img-fluid basketpong-pic"
       />
@@ -242,7 +242,7 @@ const Basketball = ({id}) => {
 
   return(
     <img
-    src="./basketball-clipart.png"
+    src={process.env.PUBLIC_URL+ "/basketball-clipart.png"}
     alt="basketball"
     className={`basketball basketball${id} ${isAnimating ? `basketball-throw${id}` : ''}`}
     onClick = {handleClick}
@@ -287,13 +287,13 @@ const Flower = ({pic}) => {
     <div className='mb-3 img-container flower-container'ref={progressRef}
     > 
     <img 
-        src={pic.source}
+        src={process.env.PUBLIC_URL+ pic.source}
         alt={pic.alttext}
         className={`img-fluid booty ${isVisible && 'wiggle'}`}
         onClick={handleClick}
     />
     <img 
-        src="./flowers-try.png"
+        src={process.env.PUBLIC_URL+ "/flowers-try.png"}
         alt="Blume"
         className={`flower ${clicked ? 'flower-active' : '' }`}
     />
