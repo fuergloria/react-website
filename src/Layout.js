@@ -6,7 +6,7 @@ const Layout = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
 
-    <div className="collapse navbar-collapse" id="navbarNav">
+    <div className="d-flex" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
           <Link className="nav-link "to="/">Home</Link>

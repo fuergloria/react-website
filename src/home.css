@@ -75,6 +75,7 @@
 .img-container{
   position: relative;
   height: auto;
+  margin-bottom: 1rem;
 }
 
 .flower{
@@ -238,4 +239,27 @@
     transform: translateX(-50%) translateY(-100%);
     transform: rotate(400deg);
 }
+}
+
+.description-text{
+  width: 75%;
+}
+
+@media(max-width: 1250px){
+  
+.description-text{
+  width: 90%;
+}
+}
+
+@media(max-width: 768px){
+  .description-text{
+    width: 100%;
+  }
+  .header{
+    width: 100%;
+    background-color: white;
+    color: #1a80d8;
+    padding-top: 2rem;
+  }
 }

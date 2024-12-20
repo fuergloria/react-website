@@ -4,7 +4,7 @@
 
 .profile-pic{
   border-radius: 50%;
-  height: 50%;
+  width: 70%;
 }
 
 .word-break{
@@ -112,9 +112,34 @@
   color: white;
 }
 
+.profile{
+  width: 80%;
+}
+
+.percent{
+  display: flex;
+  align-items: center;
+}
+
+.skill-item{
+  width: 50%;
+}
+.download-icon{
+  width: 30%;
+}
+
 @media (max-width: 1500px) {
   .contact {
     width: 75%;
+  }
+  .profile-pic{
+    width: 70%;
+  }
+  .profile{
+    width: 90%;
+  }
+  .download-icon{
+    width: 40%;
   }
 }
 
@@ -122,8 +147,72 @@
   .contact {
     width: 100%;
   }
+  .profile{
+    width: 100%;
+  }
+  .profile-pic{
+    width: 50%;
+  }
+  .download-icon{
+    width: 50%;
+  }
 }
 
+@media(max-width: 768px){
+  .timeline-line {
+    left: 0;
+    transform: none;
+    width: 0.5rem;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 2rem;
+    text-align: left;
+  }
+
+  .timeline-item.left {
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .timeline-item.right {
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: -1%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .left .timeline-dot {
+    left: -1%;
+  }
+  .right .timeline-dot {
+    left: -1%;
+  }
+
+  .skillsets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .skillset{
+    width: 100%;
+  }
+  .skill-item{
+    width: 100%;
+  }
+  .download-icon{
+    width: 80%;
+  }
+}
 .w-30{
   width: 30% !important;
 }

@@ -46,8 +46,14 @@ export const SOFTSKILLS = [
   {name: "An­pass­ungs­fäh­ig­keit", percent: '85%'},
 ];
 
+export const CERTIFICATES = [
+  {date: "12/2024", institution: "w3schools", role: "Advanced React Developer", info:"", side: "right"},
+  {date: "09/2024 - 11/2024", institution: "Harvard University", role: "Kurs CS50: Introduction to Computer Science", info:"", side: "left"}
+  
+
+]
+
 export const EDUCATION = [
-  {date: "09/2024 - 11/2024", institution: "Harvard University", role: "Kurs CS50: Introduction to Computer Science", info:"", side: "left"},
   {date: "10/2021 - 03/2023", institution: "Friedrich-Alexander-Universität, Erlangen-Nürnberg", role: "Begonnenes Studium der Biologie (B.Sc.)", info:"", side: "right"},
   {date: "10/2016 - 08/2020", institution: "Technische Universität München, München", 
     role: "B.Sc. Technologie- und Managementorientierte Betriebswirtschaftslehre (2,3)",

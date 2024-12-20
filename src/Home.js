@@ -43,7 +43,7 @@ const Header = () => {
 const Description = () => {
   return (
     <div className="col description p-4" >
-      <p className="w-75">
+      <p className="description-text">
         Mein Studium im Bereich Technik und Management hat meine Leidenschaft für das Programmieren entfacht.
         Neben meiner Begeisterung für Technik finde ich großen Gefallen daran, zu malen und Dinge zu gestalten. 
         Dieser kreative Ausgleich hilft mir, stets neue Perspektiven in meine Arbeit einzubringen und innovativ zu bleiben.
@@ -113,7 +113,7 @@ const PictureContainer = ({pic}) => {
     <>
 
       {pic.type === "normal" && (
-        <div className="mb-3 img-container"> 
+        <div className="img-container"> 
           <img
             src={process.env.PUBLIC_URL+ pic.source}
             alt={pic.alttext}
@@ -124,7 +124,7 @@ const PictureContainer = ({pic}) => {
       )}
       
       {pic.type === "switch" && (
-        <div className="pic-switch-container">
+        <div className="pic-switch-container img-container">
           <img
             src={process.env.PUBLIC_URL+ pic.source[0]}
             alt={pic.alttext}
@@ -176,6 +176,7 @@ const PictureCarousel = ({pics}) => {
 
 
   return(
+    <div className="img-container">
     <ReactBootstrap.Carousel 
       activeIndex = {index}
       onSelect={handleSelect}
@@ -200,6 +201,7 @@ const PictureCarousel = ({pics}) => {
          </ReactBootstrap.Carousel.Item>
       ))}
     </ReactBootstrap.Carousel>
+    </div>
   )
 }
 

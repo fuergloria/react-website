@@ -1,12 +1,12 @@
 import './cv.css';
 import React, {useState, useRef, useEffect} from 'react';
 import { useLocation } from 'react-router-dom';
-import {ITSKILLS, LANGUAGES, SOFTSKILLS, EDUCATION, WORKEXPERIENCE} from './Data.js';
+import {ITSKILLS, LANGUAGES, SOFTSKILLS, EDUCATION, WORKEXPERIENCE, CERTIFICATES} from './Data.js';
 
 
 const Profile = () => {
   return(
-    <div className='container px-4 w-75'>
+    <div className='profile container-fluid px-4'>
       <ProfileOverview/>
       <AboutMe/>
     </div>
@@ -105,9 +105,12 @@ const Skills = () => {
   return (
     <>
     <Header text="Kenntnisse und Kompetenzen"/>
+    <div className='skillsets'>
     <SkillSet skillset={ITSKILLS} name="Meine Software-Kenntnisse"/>
     <SkillSet skillset={LANGUAGES} name="Meine Sprachkenntnisse"/>
     <SkillSet skillset={SOFTSKILLS} name="Meine Kompetenzen"/>
+    </div>
+    
     </>
   )
   
@@ -128,8 +131,8 @@ const SkillSet = ({skillset, name}) => {
   );
 
   return (
-    <div className='container mb-4'>
-      <h6 className='text-center'><b>{name}</b></h6>
+    <div className='skillset container mb-4'>
+      <h6 className='text-center mb-3'><b>{name}</b></h6>
       {skillRows.map((rowSkills, rowIndex) => (
         <div className='row mb-2' key={rowIndex}>
           {rowSkills.map((skill, index) => (
@@ -145,7 +148,7 @@ const SkillSet = ({skillset, name}) => {
 const SkillRow = ({skills}) => {
   return(
   
-  <div className='row mb-2'>
+  <div className='row justify-content-center'>
     {skills.map((skill, index)=> (
       <SkillItem key={index} {...skill}/>
     ))}
@@ -193,13 +196,13 @@ const SkillItem = ({name, percent}) => {
   };
  
   return(  
-      <>
-      <div className='col-2 word-break '>{name}</div>
-      <div className='progress col-3 p-0 align-self-center' ref={progressRef}>
+      <div className='row skill-item mb-2'>
+      <div className='col-4 word-break d-flex align-items-center'>{name}</div>
+      <div className='progress col-6 p-0 align-self-center' ref={progressRef}>
         <div className='progress-bar' {...skilldefs} style={{width : isVisible ? percent : 0 , height: "20px", transition: 'width 1s ease-in-out'}}></div>        
       </div>
-      <div className='col-1'><span>{percent}</span></div>
-      </>
+      <div className='col-2 percent'><span>{percent}</span></div>
+      </div>
     )
 }
 
@@ -208,6 +211,8 @@ const TimelineSection = () => {
 
   return (
     <>
+      <Header text="Zertifikate" />
+      <Timeline input={CERTIFICATES}/>
       <Header text="Ausbildung"/>
       <Timeline input={EDUCATION}/>
       <Header text="Berufserfahrungen"/>
@@ -215,8 +220,6 @@ const TimelineSection = () => {
     </>
   )
 }
-
-//{date: "09/2024 - 11/2024", institution: "Harvard University", role: "Kurs CS50: Introduction to Computer Science", info:""}
 
 const Timeline = ({input}) => {
 
@@ -444,7 +447,7 @@ const Download = () => {
   return(
     <div className='container w-10 d-flex flex-column align-items-center'>
       <img 
-        className="w-25" 
+        className="download-icon" 
         src={process.env.PUBLIC_URL+ '/download-icon.png'}
         onClick={handleDownload}
         style={{cursor:"pointer"}}

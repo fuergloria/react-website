@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 body{
-  background-color: #FFFFFF;
+  background-color: #1a80d80f;
   color: #061b2d;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -52,4 +52,25 @@ body{
 
 .navbar, .navbar-expand-lg, .bg-body-tertiary{
   --bs-navbar-hover-color: #1a80d8;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    justify-content: space-around;
+  }
+
+  .nav-item {
+    margin: 0 5px;
+  }
 }
